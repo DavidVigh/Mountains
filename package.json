@@ -4,7 +4,8 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "serve-json" : "json-server --watch src\\json\\data.json"
   },
   "author": "",
   "license": "ISC",

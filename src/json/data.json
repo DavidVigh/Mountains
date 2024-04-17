@@ -1,0 +1,11 @@
+{
+    "mountains": [
+        {
+            "id": 1,
+            "name": "Throat of the World",
+            "game": "The Elder Scrolls V: Skyrim",
+            "details": "The highest peak in the Skyrim province.",
+            "height": 999999
+        }
+    ]
+}
