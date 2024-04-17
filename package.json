@@ -1,0 +1,16 @@
+{
+  "name": "mountains",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "json-server": "^1.0.0-alpha.23",
+    "vite": "^5.2.9"
+  }
+}
