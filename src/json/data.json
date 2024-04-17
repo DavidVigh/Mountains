@@ -1,120 +1,132 @@
 {
     "mountains": [
-    {
-        "id": 1,
-        "name": "Throat of the World",
-        "game": "The Elder Scrolls V: Skyrim",
-        "details": "The highest peak in the Skyrim province.",
-        "imgPath": "src\\img\\img-1.png",
-        "height": 999999
-    },
-    {
-        "id": 2,
-        "name": "Gerudo Summit",
-        "game": "The Legend of Zelda: Breath of the Wild",
-        "details": "A mountain housing an entire region in Hyrule.",
-        "imgPath": "src\\img\\img-2.png",
-        "height": 999999
-    },
-    {
-        "id": 3,
-        "name": "Ravatogh Range",
-        "game": "Final Fantasy XV",
-        "details": "A massive volcanic mountain range in the world of Eos.",
-        "imgPath": "src\\img\\img-3.png",
-        "height": 999999
-    },
-    {
-        "id": 4,
-        "name": "Phalanx's Perch",
-        "game": "Shadow of the Colossus",
-        "details": "A colossal creature's resting place hovering over a massive lake.",
-        "height": 999999
-    },
-    {
-        "id": 5,
-        "name": "Banuk Mountains",
-        "game": "Horizon Zero Dawn",
-        "details": "Mountain range inhabited by the Banuk tribe.",
-        "height": 999999
-    },
-    {
-        "id": 6,
-        "name": "Skellige Mountains",
-        "game": "The Witcher 3: Wild Hunt",
-        "details": "Massive mountains on the Skellige Isles.",
-        "height": 999999
-    },
-    {
-        "id": 7,
-        "name": "Wenlocan Peaks",
-        "game": "Assassin's Creed Valhalla",
-        "details": "High peaks in Valhalla's Viking-era England.",
-        "height": 999999
-    },
-    {
-        "id": 8,
-        "name": "Grizzlies Range",
-        "game": "Red Dead Redemption 2",
-        "details": "Massive mountain range in Arthur Morgan's adventures.",
-        "height": 999999
-    },
-    {
-        "id": 9,
-        "name": "Himalayas",
-        "game": "Far Cry 4",
-        "details": "The Himalayan mountain range in the fictional country of Kyrat.",
-        "height": 999999
-    },
-    {
-        "id": 10,
-        "name": "Himalayan Peaks",
-        "game": "Tomb Raider (2013)",
-        "details": "Snow-capped peaks and gorges on a mysterious island.",
-        "height": 999999
-    },
-    {
-        "id": 11,
-        "name": "Mountaintops",
-        "game": "Journey",
-        "details": "Majestic mountains and sand dunes in a mesmerizing world.",
-        "height": 999999
-    },
-    {
-        "id": 12,
-        "name": "Celeste Mountain",
-        "game": "Celeste",
-        "details": "The challenging peak where Madeline seeks to climb.",
-        "height": 999999
-    },
-    {
-        "id": 13,
-        "name": "Mountain of the Gods",
-        "game": "God of War (2018)",
-        "details": "Massive mountains shaped by titans in the God of War world.",
-        "height": 999999
-    },
-    {
-        "id": 14,
-        "name": "Wyndia Mountains",
-        "game": "Breath of Fire IV",
-        "details": "Tall mountains around the Wyndia Principality.",
-        "height": 999999
-    },
-    {
-        "id": 15,
-        "name": "Snowcapped Peaks",
-        "game": "World of Warcraft",
-        "details": "Snowy mountain ranges in Azeroth.",
-        "height": 999999
-    },
-    {
-        "id": 16,
-        "name": "Snowy Mountains",
-        "game": "I Am Setsuna",
-        "details": "Numerous snowy peaks in the world of I Am Setsuna.",
-        "height": 999999
-    }
-]
-
+        {
+            "id": 1,
+            "name": "Throat of the World",
+            "game": "The Elder Scrolls V: Skyrim",
+            "details": "The highest peak in the Skyrim province.",
+            "imgPath": "src\\img\\img-1.png",
+            "height": 999999
+        },
+        {
+            "id": 2,
+            "name": "Gerudo Summit",
+            "game": "The Legend of Zelda: Breath of the Wild",
+            "details": "A mountain housing an entire region in Hyrule.",
+            "imgPath": "src\\img\\img-2.png",
+            "height": 999999
+        },
+        {
+            "id": 3,
+            "name": "Ravatogh Range",
+            "game": "Final Fantasy XV",
+            "details": "A massive volcanic mountain range in the world of Eos.",
+            "imgPath": "src\\img\\img-3.png",
+            "height": 999999
+        },
+        {
+            "id": 4,
+            "name": "Phalanx's Perch",
+            "game": "Shadow of the Colossus",
+            "details": "A colossal creature's resting place hovering over a massive lake.",
+            "imgPath": "src\\img\\img-4.png",
+            "height": 999999
+        },
+        {
+            "id": 5,
+            "name": "Banuk Mountains",
+            "game": "Horizon Zero Dawn",
+            "details": "Mountain range inhabited by the Banuk tribe.",
+            "imgPath": "src\\img\\img-5.png",
+            "height": 999999
+        },
+        {
+            "id": 6,
+            "name": "Skellige Mountains",
+            "game": "The Witcher 3: Wild Hunt",
+            "details": "Massive mountains on the Skellige Isles.",
+            "imgPath": "src\\img\\img-6.png",
+            "height": 999999
+        },
+        {
+            "id": 7,
+            "name": "Wenlocan Peaks",
+            "game": "Assassin's Creed Valhalla",
+            "details": "High peaks in Valhalla's Viking-era England.",
+            "imgPath": "src\\img\\img-7.png",
+            "height": 999999
+        },
+        {
+            "id": 8,
+            "name": "Grizzlies Range",
+            "game": "Red Dead Redemption 2",
+            "details": "Massive mountain range in Arthur Morgan's adventures.",
+            "imgPath": "src\\img\\img-8.png",
+            "height": 999999
+        },
+        {
+            "id": 9,
+            "name": "Himalayas",
+            "game": "Far Cry 4",
+            "details": "The Himalayan mountain range in the fictional country of Kyrat.",
+            "imgPath": "src\\img\\img-9.png",
+            "height": 999999
+        },
+        {
+            "id": 10,
+            "name": "Himalayan Peaks",
+            "game": "Tomb Raider (2013)",
+            "details": "Snow-capped peaks and gorges on a mysterious island.",
+            "imgPath": "src\\img\\img-10.png",
+            "height": 999999
+        },
+        {
+            "id": 11,
+            "name": "Mountaintops",
+            "game": "Journey",
+            "details": "Majestic mountains and sand dunes in a mesmerizing world.",
+            "imgPath": "src\\img\\img-11.png",
+            "height": 999999
+        },
+        {
+            "id": 12,
+            "name": "Celeste Mountain",
+            "game": "Celeste",
+            "details": "The challenging peak where Madeline seeks to climb.",
+            "imgPath": "src\\img\\img-12.png",
+            "height": 999999
+        },
+        {
+            "id": 13,
+            "name": "Mountain of the Gods",
+            "game": "God of War (2018)",
+            "details": "Massive mountains shaped by titans in the God of War world.",
+            "imgPath": "src\\img\\img-13.png",
+            "height": 999999
+        },
+        {
+            "id": 14,
+            "name": "Wyndia Mountains",
+            "game": "Breath of Fire IV",
+            "details": "Tall mountains around the Wyndia Principality.",
+            "imgPath": "src\\img\\img-14.png",
+            "height": 999999
+        },
+        {
+            "id": 15,
+            "name": "Snowcapped Peaks",
+            "game": "World of Warcraft",
+            "details": "Snowy mountain ranges in Azeroth.",
+            "imgPath": "src\\img\\img-15.png",
+            "height": 999999
+        },
+        {
+            "id": 16,
+            "name": "Snowy Mountains",
+            "game": "I Am Setsuna",
+            "details": "Numerous snowy peaks in the world of I Am Setsuna.",
+            "imgPath": "src\\img\\img-16.png",
+            "height": 999999
+        }
+    ]
 }

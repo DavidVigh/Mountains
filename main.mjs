@@ -19,7 +19,32 @@ async function getMountains() {
 
 await getMountains();
 
-const main = document.querySelector("main");
+function showMountains(){
+    const cards = document.getElementById("cards");
+
+    const template = document.getElementById("cardTemplate");
+
+    for (const mountain of mountains) {
+        const content = template.content.cloneNode(true);
+
+        let img = content.querySelector("img");
+        img.src = mountain.imgPath;
+        img.alt = mountain.name;
+
+        let title = content.querySelector("h5");
+        title.textContent = mountain.name;
+
+        let game = content.getElementById("game");
+        game.textContent = `Game: ${mountain.game}`;
+
+        let details = content.getElementById("details");
+        details.textContent = mountain.details;
+
+        cards.appendChild(content);
+    }
+}
+
+/* const main = document.querySelector("main");
 
 const mountainOne = mountains[0];
 
@@ -27,7 +52,9 @@ const img = document.createElement("img");
 
 img.src = mountainOne.imgPath;
 
-main.appendChild(img);
+main.appendChild(img); */
 
 console.log(mountains)
+
+window.onload = showMountains;
 

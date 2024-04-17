@@ -1,45 +1,99 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mountains</title>
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav d-flex align-items-center">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2 fs-4" href="#">Mountains</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-            </ul>
-          </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 fs-4" href="#">Mountains</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 
-      <main class="container">
+    <main class="container-fluid">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-12">
+                    <h1 class="text-center mt-3">Welcome to the World of Legendary Peaks!</h1>
 
-      </main>
+                    <p class="d-flex justify-content-center">
+                        <a class="collapse-href" style="transform: rotate(90deg);" data-bs-toggle="collapse" href="#collapse" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            <span class="fs-1">&#187;</span>
+                        </a>
+                    </p>
+                    <div class="collapse mb-5" id="collapse">
+                        <div class="card card-body">
+                            <p class="text-center fst-italic">
+                                Explore the breathtaking majesty of the world's most iconic mountains in video games. From the
+                                towering Throat of the World in Skyrim to the mysterious Gerudo Summit in Hyrule, immerse
+                                yourself
+                                in the grandeur of these virtual landscapes.
+                            </p>
+                            <p class="text-center fst-italic">
+                                Discover the lore behind each mountain, their significance in the games they inhabit, and the
+                                challenges they present to adventurers. Whether it's the volcanic Ravatogh Range in Final
+                                Fantasy XV
+                                or the snow-capped Banuk Mountains in Horizon Zero Dawn, each peak has a story to tell.
+                            </p>
+                            <p class="text-center fst-italic">
+                                Join us on a journey through the heights of gaming, where mountains are not just scenery but
+                                integral parts of the tales we experience. Let's ascend to new heights and explore the World of
+                                Legendary Peaks!
+        
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex" id="cards">
+
+        </div>
+    </main>
 
     <script type="module" src="main.mjs"></script>
 
-    <template>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-left" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <template id="cardTemplate">
+        <div class="col-xs-12 col-lg-6">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-xs-12 col-md-5">
+                        <img src="" class="img-fluid rounded-start full-image" alt="...">
+                    </div>
+                    <div class="col-xs-12 col-md-7">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text" id="game"></p>
+                            <p class="card-text" id="details"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
     </template>
 </body>
+
 </html>
