@@ -77,7 +77,7 @@ function showMountains(){
             let badge = document.createElement("span");
             badge.classList.add("badge");
             badge.style.background = climateColors[element];
-            badge.style.boxShadow = "3px 3px 0px #696969";
+            badge.style.boxShadow = "2px 2px 0px #696969";
             badge.classList.add("text-dark");
             badge.classList.add("p-2");
             badge.classList.add("m-1");
