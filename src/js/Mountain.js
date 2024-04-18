@@ -5,13 +5,15 @@ export class Mountain {
     details
     imgPath
     height
-    constructor(id, name, game, details, imgPath, height){
+    climate
+    constructor(id, name, game, details, imgPath, height, climate){
         this.id = id
         this.name = name
         this.game = game
         this.details = details
         this.imgPath = imgPath
         this.height = height
+        this.climate = climate
     }
 
     toJson(){

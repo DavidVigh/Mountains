@@ -2,3 +2,11 @@
     text-decoration: none;
     color: #2b3035;
 }
+
+.card-dl {
+    margin-left: 1rem;
+}
+
+.card {
+    height: 750px;
+}
