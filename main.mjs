@@ -1,5 +1,6 @@
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap/dist/js/bootstrap"
+import "/src/css/bootstrap-tagsinput.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap";
 import { Mountain } from "./src/js/Mountain";
 
 let mountains = [];
@@ -91,18 +92,6 @@ function showMountains(){
 
 const tagsInput = document.getElementById("tags");
 
-for (const element in climateColors) {
-    let badge = document.createElement("span");
-    let p = document.createElement("p");
-    badge.classList.add("badge");
-    badge.style.background = climateColors[element];
-    badge.textContent = element;
-    p.appendChild(badge);
-    tagsInput.appendChild(p);
-    }
-
-
-
 /* const main = document.querySelector("main");
 
 const mountainOne = mountains[0];
@@ -112,6 +101,8 @@ const img = document.createElement("img");
 img.src = mountainOne.imgPath;
 
 main.appendChild(img); */
+
+
 
 let params = new URL(document.location).searchParams;
 let tags = params.get("tags") != "" ? Array.from(params.get("tags").split(",")) : null;
@@ -138,3 +129,9 @@ console.log(mountains)
 
 window.onload = showMountains;
 
+document.querySelector('input[type="text"][placeholder=""]')
+.addEventListener("click", () => {
+    const bootstraptagsInput = document.querySelector('input[type="text"][placeholder=""]').parentNode;
+    bootstraptagsInput.focus();
+    console.log(bootstraptagsInput);
+});

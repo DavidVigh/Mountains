@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mountains</title>
-    <link rel="stylesheet" href="src/css/bootstrap-tagsinput.css">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 
@@ -110,12 +109,15 @@
                 </div>
                 <div class="col-3">
                     <label for="nameInput" class="form-label">Summit</label>
-                    <input type="text" class="form-control" id="nameInput">
+                    <div class="input-group mb-3">
+                        <input type="number" min="0" class="form-control" aria-label="Summit">
+                        <span for="" class="input-group-text">m</span>
+                      </div>
                 </div>
 
-                <div class="col-3 d-flex flex-column">
+                <div class="col-3">
                     <label for="tags" class="form-label">Type tags (max 3)</label>
-                    <input type="text" class="form-control" name="tags" id="tags">
+                    <input type="text" name="tags" id="tags">
                 </div>
 
                 <div class="col-3 d-flex justify-content-center">
@@ -170,7 +172,7 @@
     <script>
         $('#tags').tagsinput({
             maxTags: 3
-          });
+        });
     </script>
 </body>
 
