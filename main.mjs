@@ -89,6 +89,20 @@ function showMountains(){
     }
 }
 
+const tagsInput = document.getElementById("tags");
+
+for (const element in climateColors) {
+    let badge = document.createElement("span");
+    let p = document.createElement("p");
+    badge.classList.add("badge");
+    badge.style.background = climateColors[element];
+    badge.textContent = element;
+    p.appendChild(badge);
+    tagsInput.appendChild(p);
+    }
+
+
+
 /* const main = document.querySelector("main");
 
 const mountainOne = mountains[0];
@@ -98,6 +112,27 @@ const img = document.createElement("img");
 img.src = mountainOne.imgPath;
 
 main.appendChild(img); */
+
+let params = new URL(document.location).searchParams;
+let tags = params.get("tags") != "" ? Array.from(params.get("tags").split(",")) : null;
+
+if (tags != null && tags[0] != "all") {
+    for (const tag of tags) {
+        console.log(tag)
+        mountains = mountains.filter(x => x.climate.some(
+            (element) => element === tag))
+    };
+}
+else if (tags != null && tags.length === 1 && tags[0] == "all") {
+    showMountains();
+}
+else {
+    console.log("error");
+}
+
+
+
+console.log(tags);
 
 console.log(mountains)
 

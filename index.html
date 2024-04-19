@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mountains</title>
+    <link rel="stylesheet" href="src/css/bootstrap-tagsinput.css">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 
@@ -102,9 +103,25 @@
 
             </div>
             <hr>
-            <div>
-                <p class="text-center fst-italic">Filters here:</p>
-            </div>
+            <form class="row">
+                <div class="col-3">
+                    <label for="nameInput" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="nameInput">
+                </div>
+                <div class="col-3">
+                    <label for="nameInput" class="form-label">Summit</label>
+                    <input type="text" class="form-control" id="nameInput">
+                </div>
+
+                <div class="col-3 d-flex flex-column">
+                    <label for="tags" class="form-label">Type tags (max 3)</label>
+                    <input type="text" class="form-control" name="tags" id="tags">
+                </div>
+
+                <div class="col-3 d-flex justify-content-center">
+                    <input class="btn btn-success p-2 w-50 fs-5" type="submit" value="Filter">
+                </div>
+            </form>
             <hr>
 
         </div>
@@ -136,15 +153,25 @@
 
                     <p class="fw-bold mb-0">Climate</p>
                     <div class="d-flex justify-content-between">
-                            <p id="climate">
-                            </p>
-                        </div>
+                        <p id="climate">
+                        </p>
+                    </div>
 
                     <a href="#" class="btn btn-primary">More details</a>
                 </div>
             </div>
         </div>
     </template>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="src/js/bootstrap-tagsinput.js"></script>
+
+    <script>
+        $('#tags').tagsinput({
+            maxTags: 3
+          });
+    </script>
 </body>
 
 </html>
