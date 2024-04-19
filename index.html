@@ -35,7 +35,7 @@
         <div class="container">
             <div class="row d-flex">
                 <div class="col-12">
-                    <h1 class="text-center mt-3 mb-3">Welcome to the World of Legendary Peaks!</h1>
+                    <h1 class="text-center fw-bolder mt-3 mb-3">Welcome to the World of Legendary Peaks!</h1>
 
                     <p class="d-flex justify-content-center d-lg-none">
                         <a class="collapse-href" style="transform: rotate(90deg);" data-bs-toggle="collapse"
@@ -103,29 +103,32 @@
             </div>
             <hr>
             <form class="row">
-                <div class="col-3">
+                <div class="col-md-6 col-lg-6 col-xl-2 my-2">
                     <label for="nameInput" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="nameInput">
+                    <input type="text" class="form-control" name="nameInput" id="nameInput">
                 </div>
-                <div class="col-3">
+                <div class="col-md-6 col-lg-6 col-xl-2 my-2">
                     <label for="nameInput" class="form-label">Summit</label>
-                    <div class="input-group mb-3">
-                        <input type="number" min="0" class="form-control" aria-label="Summit">
-                        <span for="" class="input-group-text">m</span>
+                    <div class="input-group">
+                        <input type="number" id="summit" name="summit" min="0" class="form-control" aria-label="Summit">
+                        <span for="summit" class="input-group-text">m</span>
                       </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-md-12 col-xl-6 my-2">
                     <label for="tags" class="form-label">Type tags (max 3)</label>
                     <input type="text" name="tags" id="tags">
                 </div>
 
-                <div class="col-3 d-flex justify-content-center">
-                    <input class="btn btn-success p-2 w-50 fs-5" type="submit" value="Filter">
+                <div class="col-xs-12 col-xl-2 my-2 d-flex justify-content-center">
+                    <input class="btn btn-success w-100 fs-5" type="submit" value="Filter">
                 </div>
             </form>
             <hr>
 
+        </div>
+
+        <div id="mountainCount" class="box">
         </div>
 
         <div class="row d-flex mt-5" id="cards">

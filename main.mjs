@@ -106,6 +106,12 @@ main.appendChild(img); */
 
 let params = new URL(document.location).searchParams;
 let tags = params.get("tags") != "" ? Array.from(params.get("tags").split(",")) : null;
+let nameInput = params.get("nameInput") != "" ? params.get("nameInput").toLowerCase() : null;
+
+if (nameInput != null) {
+    mountains = mountains.filter(x => x.name.toLowerCase().includes(nameInput));
+    console.log(nameInput);
+}
 
 if (tags != null && tags[0] != "all") {
     for (const tag of tags) {
@@ -118,20 +124,29 @@ else if (tags != null && tags.length === 1 && tags[0] == "all") {
     showMountains();
 }
 else {
-    console.log("error");
+    //console.log("error");
 }
 
+const box = document.getElementById("mountainCount");
+const h2 = document.createElement("h2");
+h2.textContent = `Mountains (${mountains.length})`;
+h2.classList.add("text-center");
+h2.classList.add("fs-1");
+h2.classList.add("fw-bolder");
+h2.classList.add("mt-5");
+box.appendChild(h2);
 
+// console.log(h2);
 
-console.log(tags);
+// console.log(tags);
 
 console.log(mountains)
 
 window.onload = showMountains;
 
-document.querySelector('input[type="text"][placeholder=""]')
+/* document.querySelector('input[type="text"][placeholder=""]')
 .addEventListener("click", () => {
     const bootstraptagsInput = document.querySelector('input[type="text"][placeholder=""]').parentNode;
     bootstraptagsInput.focus();
     console.log(bootstraptagsInput);
-});
+}); */
