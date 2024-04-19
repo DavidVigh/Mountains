@@ -6,7 +6,7 @@
             "game": "The Elder Scrolls V: Skyrim",
             "details": "The highest peak in the Skyrim province.",
             "imgPath": "src\\img\\img-1.png",
-            "height": 999999,
+            "height": 766.5,
             "climate": ["snowy", "alpine forests", "hostile wildlife"]
         },
         {
@@ -15,7 +15,7 @@
             "game": "The Legend of Zelda: Breath of the Wild",
             "details": "A mountain housing an entire region in Hyrule.",
             "imgPath": "src\\img\\img-2.png",
-            "height": 999999,
+            "height": 12000,
             "climate": ["dry and arid", "shifting sands", "hostile wildlife"]
         },
         {
@@ -24,7 +24,7 @@
             "game": "Final Fantasy XV",
             "details": "A massive volcanic mountain range in the world of Eos.",
             "imgPath": "src\\img\\img-3.png",
-            "height": 999999,
+            "height": 856,
             "climate": ["volcanic", "ash-filled"]
         },
         {
@@ -33,7 +33,7 @@
             "game": "Shadow of the Colossus",
             "details": "A colossal creature's resting place hovering over a massive lake.",
             "imgPath": "src\\img\\img-4.png",
-            "height": 999999,
+            "height": 753,
             "climate": ["alpine forests", "changing weather conditions", "mystical", "ethereal"]
         },
         {
@@ -42,7 +42,7 @@
             "game": "Horizon Zero Dawn",
             "details": "Mountain range inhabited by the Banuk tribe.",
             "imgPath": "src\\img\\img-5.png",
-            "height": 999999,
+            "height": 4840,
             "climate": ["snowy", "icy", "hostile wildlife", "magical creatures"]
         },
         {
@@ -51,7 +51,7 @@
             "game": "The Witcher 3: Wild Hunt",
             "details": "Massive mountains on the Skellige Isles.",
             "imgPath": "src\\img\\img-6.png",
-            "height": 999999,
+            "height": 675,
             "climate": ["alpine forests"]
         },
         {
@@ -60,7 +60,7 @@
             "game": "Assassin's Creed Valhalla",
             "details": "High peaks in Valhalla's Viking-era England.",
             "imgPath": "src\\img\\img-7.png",
-            "height": 999999,
+            "height": 3450,
             "climate": ["snowy", "shifting sands"]
         },
         {
@@ -69,7 +69,7 @@
             "game": "Red Dead Redemption 2",
             "details": "Massive mountain range in Arthur Morgan's adventures.",
             "imgPath": "src\\img\\img-8.png",
-            "height": 999999,
+            "height": 3600,
             "climate": ["snowy", "frozen", "hostile wildlife"]
         },
         {
@@ -78,7 +78,7 @@
             "game": "Far Cry 4",
             "details": "The Himalayan mountain range in the fictional country of Kyrat.",
             "imgPath": "src\\img\\img-9.png",
-            "height": 999999,
+            "height": 8849,
             "climate": ["extreme", "snowy", "frozen", "hostile wildlife"]
         },
         {
@@ -87,7 +87,7 @@
             "game": "Tomb Raider (2013)",
             "details": "Snow-capped peaks and gorges on a mysterious island.",
             "imgPath": "src\\img\\img-10.png",
-            "height": 999999,
+            "height": 8849,
             "climate": ["tropical", "jungles", "hostile wildlife"]
         },
         {
@@ -96,7 +96,7 @@
             "game": "Journey",
             "details": "Majestic mountains and sand dunes in a mesmerizing world.",
             "imgPath": "src\\img\\img-11.png",
-            "height": 999999,
+            "height": 4372,
             "climate": ["dry and arid", "ethereal", "mystical"]
         },
         {
@@ -105,7 +105,7 @@
             "game": "Celeste",
             "details": "The challenging peak where Madeline seeks to climb.",
             "imgPath": "src\\img\\img-12.png",
-            "height": 999999,
+            "height": 15847,
             "climate": ["changing weather conditions", "fantasy"]
         },
         {
@@ -114,7 +114,7 @@
             "game": "God of War (2018)",
             "details": "Massive mountains shaped by titans in the God of War world.",
             "imgPath": "src\\img\\img-13.png",
-            "height": 999999,
+            "height": 2917.727,
             "climate": ["snowy", "mystical", "ethereal", "elemental magic"]
         },
         {
@@ -123,7 +123,7 @@
             "game": "Breath of Fire IV",
             "details": "Tall mountains around the Wyndia Principality.",
             "imgPath": "src\\img\\img-14.png",
-            "height": 999999,
+            "height": 3255,
             "climate": ["fantasy", "magical creatures", "hostile wildlife"]
         },
         {
@@ -132,7 +132,7 @@
             "game": "World of Warcraft",
             "details": "Snowy mountain ranges in Azeroth. These mountain ranges are for Alliance players.",
             "imgPath": "src\\img\\img-15.png",
-            "height": 999999,
+            "height": 4839,
             "climate": ["snowy", "fantasy", "elemental magic", "magical creatures"]
         },
         {
@@ -141,7 +141,7 @@
             "game": "I Am Setsuna",
             "details": "Numerous snowy peaks in the world of I Am Setsuna.",
             "imgPath": "src\\img\\img-16.png",
-            "height": 999999,
+            "height": 2864,
             "climate": ["snowy", "frozen"]
         }
     ]
