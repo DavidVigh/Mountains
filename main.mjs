@@ -129,7 +129,7 @@ else {
 
 const box = document.getElementById("mountainCount");
 const h2 = document.createElement("h2");
-h2.textContent = `Mountains (${mountains.length})`;
+h2.textContent = `Mountains (${mountains.length}/16)`;
 h2.classList.add("text-center");
 h2.classList.add("fs-1");
 h2.classList.add("fw-bolder");
