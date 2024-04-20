@@ -1,7 +1,11 @@
 import "/src/css/bootstrap-tagsinput.css";
+import "/src/js/bootstrap-tagsinput.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
+
 import { Mountain } from "./src/js/Mountain";
+
+// DATA
 
 let mountains = [];
 
@@ -90,23 +94,11 @@ function showMountains(){
     }
 }
 
-const tagsInput = document.getElementById("tags");
-
-/* const main = document.querySelector("main");
-
-const mountainOne = mountains[0];
-
-const img = document.createElement("img");
-
-img.src = mountainOne.imgPath;
-
-main.appendChild(img); */
-
-
+// FILTERS
 
 let params = new URL(document.location).searchParams;
-let tags = params.get("tags") != "" ? Array.from(params.get("tags").split(",")) : null;
-let nameInput = params.get("nameInput") != "" ? params.get("nameInput").toLowerCase() : null;
+let tags = params.get("tags") != "" && params.get("tags")!= null  ? Array.from(params.get("tags").split(",")) : null;
+let nameInput = params.get("nameInput") != "" && params.get("nameInput") != null ? params.get("nameInput").toLowerCase() : null;
 let sMin = params.get("summitMin") != "" ? params.get("summitMin") : null;
 let sMax = params.get("summitMax") != "" ? params.get("summitMax") : null;
 
@@ -122,13 +114,41 @@ if (sMin != null && sMax != null) {
 
 if (tags != null) {
     for (const tag of tags) {
-        console.log(tag)
+        //console.log(tag)
         mountains = mountains.filter(x => x.climate.some(
             (element) => element === tag))
     };
 }
 
-console.log(tags);
+const submit = document.getElementById("submit");
+
+const SubmitAttr = function(obj) {
+    for (const key in obj) {
+        const input = obj[key];
+        if (key == "tagsInput") {
+            console.log($("#tags").val());
+        }
+        input.addEventListener("input", () => {
+            if (input.value.trim() !== "") {
+                submit.removeAttribute("disabled");
+            }
+            else {
+                submit.setAttribute("disabled", "disabled");
+            }
+        });
+    }
+}
+
+var filters = {
+    nameInput: document.getElementById("nameInput"),
+    minHInput: document.getElementById("summitMin"),
+    maxHInput: document.getElementById("summitMax"),
+    tagsInput: document.getElementById("tags")
+};
+
+SubmitAttr(filters);
+
+// MISC
 
 const box = document.getElementById("mountainCount");
 const h2 = document.createElement("h2");
@@ -139,17 +159,8 @@ h2.classList.add("fw-bolder");
 h2.classList.add("mt-5");
 box.appendChild(h2);
 
-// console.log(h2);
-
-// console.log(tags);
-
 console.log(mountains)
 
-window.onload = showMountains;
+console.log($("#tags").val());
 
-/* document.querySelector('input[type="text"][placeholder=""]')
-.addEventListener("click", () => {
-    const bootstraptagsInput = document.querySelector('input[type="text"][placeholder=""]').parentNode;
-    bootstraptagsInput.focus();
-    console.log(bootstraptagsInput);
-}); */
+window.onload = showMountains;
