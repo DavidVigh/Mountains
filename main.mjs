@@ -107,25 +107,28 @@ main.appendChild(img); */
 let params = new URL(document.location).searchParams;
 let tags = params.get("tags") != "" ? Array.from(params.get("tags").split(",")) : null;
 let nameInput = params.get("nameInput") != "" ? params.get("nameInput").toLowerCase() : null;
+let sMin = params.get("summitMin") != "" ? params.get("summitMin") : null;
+let sMax = params.get("summitMax") != "" ? params.get("summitMax") : null;
+
 
 if (nameInput != null) {
     mountains = mountains.filter(x => x.name.toLowerCase().includes(nameInput));
-    console.log(nameInput);
 }
 
-if (tags != null && tags[0] != "all") {
+if (sMin != null && sMax != null) {
+    mountains = mountains.filter(x => x.height >= sMin && x.height <= sMax);
+}
+
+
+if (tags != null) {
     for (const tag of tags) {
         console.log(tag)
         mountains = mountains.filter(x => x.climate.some(
             (element) => element === tag))
     };
 }
-else if (tags != null && tags.length === 1 && tags[0] == "all") {
-    showMountains();
-}
-else {
-    //console.log("error");
-}
+
+console.log(tags);
 
 const box = document.getElementById("mountainCount");
 const h2 = document.createElement("h2");
