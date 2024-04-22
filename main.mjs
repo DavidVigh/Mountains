@@ -3,6 +3,8 @@ import "/src/js/bootstrap-tagsinput.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 
+//Made by Vigh David
+
 import { Mountain } from "./src/js/Mountain";
 
 // DATA
@@ -48,12 +50,12 @@ async function getMountains() {
         d["imgPath"],
         d["height"],
         d["climate"]
-        )))
+    )))
 }
 
 await getMountains();
 
-function showMountains(){
+function showMountains() {
     const cards = document.getElementById("cards");
 
     const template = document.getElementById("cardTemplate");
@@ -97,7 +99,7 @@ function showMountains(){
 // FILTERS
 
 let params = new URL(document.location).searchParams;
-let tags = params.get("tags") != "" && params.get("tags")!= null  ? Array.from(params.get("tags").split(",")) : null;
+let tags = params.get("tags") != "" && params.get("tags") != null ? Array.from(params.get("tags").split(",")) : null;
 let nameInput = params.get("nameInput") != "" && params.get("nameInput") != null ? params.get("nameInput").toLowerCase() : null;
 let sMin = params.get("summitMin") != "" ? params.get("summitMin") : null;
 let sMax = params.get("summitMax") != "" ? params.get("summitMax") : null;
@@ -122,24 +124,53 @@ if (tags != null) {
 
 const submit = document.getElementById("submit");
 
-const SubmitAttr = function(obj) {
+const SubmitAttr = function (obj) {
+    const count = 4;
     for (const key in obj) {
         const input = obj[key];
-        if (key == "tagsInput") {
-            console.log($("#tags").val());
-        }
+        //console.log(input);
+        console.log(key);
+        console.log(input.value);
+            if (key == "tagsInput") {
+                const lastInputTag = document.querySelector(".bootstrap-tagsinput>input");
+                lastInputTag.addEventListener("focusout", () => {
+                    const inputForTags = document.querySelectorAll(".bootstrap-tagsinput>span");
+
+                    if (inputForTags.length != 0) {
+                        console.log(lastInputTag);
+                        submit.removeAttribute("disabled");
+                    }
+
+                    inputForTags.forEach(x => x.querySelector('span[data-role="remove"]').addEventListener("click", () => {
+                        if (inputForTags.length == 1) {
+                            submit.setAttribute("disabled", "disabled");
+                        }
+                        else{
+                            submit.removeAttribute("disabled");
+                        }
+                    }))
+                })
+            }
+
         input.addEventListener("input", () => {
-            if (input.value.trim() !== "") {
+            if (input.value !== "") {
                 submit.removeAttribute("disabled");
             }
             else {
+                count -= 1;
                 submit.setAttribute("disabled", "disabled");
             }
-        });
+        })
+
     }
+
+    if (count != 0) {
+        submit.removeAttribute("disabled");
+    }
+
 }
 
-var filters = {
+const filters = {
     nameInput: document.getElementById("nameInput"),
     minHInput: document.getElementById("summitMin"),
     maxHInput: document.getElementById("summitMax"),
@@ -161,6 +192,9 @@ box.appendChild(h2);
 
 console.log(mountains)
 
-console.log($("#tags").val());
+//console.log($("#tags").val());
 
-window.onload = showMountains;
+showMountains()
+
+
+
