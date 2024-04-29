@@ -125,7 +125,6 @@ if (tags != null) {
 const submit = document.getElementById("submit");
 
 const SubmitAttr = function (obj) {
-    const count = 4;
     for (const key in obj) {
         const input = obj[key];
         //console.log(input);
@@ -145,7 +144,7 @@ const SubmitAttr = function (obj) {
                         if (inputForTags.length == 1) {
                             submit.setAttribute("disabled", "disabled");
                         }
-                        else{
+                        else {
                             submit.removeAttribute("disabled");
                         }
                     }))
@@ -153,21 +152,30 @@ const SubmitAttr = function (obj) {
             }
 
         input.addEventListener("input", () => {
-            if (input.value !== "") {
+            const valuesToArray = [];
+            for (const key in obj) {
+                if (key == "tagsInput") {
+                    const inputForTags = document.querySelectorAll(".bootstrap-tagsinput>span");
+                    for (const iterator of inputForTags) {
+                        valuesToArray.push(iterator.textContent);
+                    }
+
+                }
+                else{
+                    valuesToArray.push(obj[key].value);
+                }
+            }
+
+            console.log(valuesToArray);
+
+            if (valuesToArray.some(x => x !== "")) {
                 submit.removeAttribute("disabled");
             }
             else {
-                count -= 1;
                 submit.setAttribute("disabled", "disabled");
             }
         })
-
     }
-
-    if (count != 0) {
-        submit.removeAttribute("disabled");
-    }
-
 }
 
 const filters = {
