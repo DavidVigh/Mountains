@@ -105,6 +105,7 @@ let sMin = params.get("summitMin") != "" ? params.get("summitMin") : null;
 let sMax = params.get("summitMax") != "" ? params.get("summitMax") : null;
 
 
+
 if (nameInput != null) {
     mountains = mountains.filter(x => x.name.toLowerCase().includes(nameInput));
 }
@@ -122,29 +123,60 @@ if (tags != null) {
     };
 }
 
+// SUBMIT BTN - (((((((((:
+
 const submit = document.getElementById("submit");
+
+function valuesToArray(obj) {
+    const valuesArray = [];
+    for (const key in obj) {
+        if (key == "tagsInput") {
+            const inputForTags = document.querySelectorAll(".bootstrap-tagsinput>span");
+            for (const iterator of inputForTags) {
+                valuesArray.push(iterator.textContent);
+            }
+        }
+        else{
+            valuesArray.push(obj[key].value);
+        }
+    }
+    return valuesArray;
+}
+
+function getTags(){
+    let tags = document.querySelectorAll(".bootstrap-tagsinput>span")
+    console.log(tags);
+    return tags;
+}
+
+function getInputValues(obj){
+    return valuesToArray(obj).slice(0, 3);
+}
+
+function getTagsValues(obj){
+    return valuesToArray(obj).slice(3, 6);
+}
 
 const SubmitAttr = function (obj) {
     for (const key in obj) {
         const input = obj[key];
-        //console.log(input);
-        console.log(key);
-        console.log(input.value);
             if (key == "tagsInput") {
                 const lastInputTag = document.querySelector(".bootstrap-tagsinput>input");
                 lastInputTag.addEventListener("focusout", () => {
-                    const inputForTags = document.querySelectorAll(".bootstrap-tagsinput>span");
 
-                    if (inputForTags.length != 0) {
-                        console.log(lastInputTag);
+                    const inputForTags = getTags();
+
+                    if (inputForTags.length !== 0) {
                         submit.removeAttribute("disabled");
                     }
 
                     inputForTags.forEach(x => x.querySelector('span[data-role="remove"]').addEventListener("click", () => {
-                        if (inputForTags.length == 1) {
+                        const inputvals = getInputValues(obj);
+                        if (inputForTags.length === 1 && inputvals.every(x => x == "")) {
                             submit.setAttribute("disabled", "disabled");
+                            console.log(inputvals);
                         }
-                        else {
+                        else{
                             submit.removeAttribute("disabled");
                         }
                     }))
@@ -152,23 +184,8 @@ const SubmitAttr = function (obj) {
             }
 
         input.addEventListener("input", () => {
-            const valuesToArray = [];
-            for (const key in obj) {
-                if (key == "tagsInput") {
-                    const inputForTags = document.querySelectorAll(".bootstrap-tagsinput>span");
-                    for (const iterator of inputForTags) {
-                        valuesToArray.push(iterator.textContent);
-                    }
-
-                }
-                else{
-                    valuesToArray.push(obj[key].value);
-                }
-            }
-
-            console.log(valuesToArray);
-
-            if (valuesToArray.some(x => x !== "")) {
+            const values = valuesToArray(obj);
+            if (values.some(x => x !== "")) {
                 submit.removeAttribute("disabled");
             }
             else {
@@ -187,6 +204,17 @@ const filters = {
 
 SubmitAttr(filters);
 
+// CLEAR BTN - :)))))))))))))))))
+
+const clear = document.getElementById("clear");
+function clearForm() {
+    clear.addEventListener("click", () => {
+        $('#tags').tagsinput('removeAll');
+    });
+}
+
+clearForm();
+
 // MISC
 
 const box = document.getElementById("mountainCount");
@@ -200,9 +228,9 @@ box.appendChild(h2);
 
 console.log(mountains)
 
-//console.log($("#tags").val());
-
 showMountains()
+
+window.onload = console.log(document.location.href);
 
 
 
