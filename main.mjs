@@ -6,10 +6,12 @@ import "bootstrap/dist/js/bootstrap";
 //Made by Vigh David
 
 import { Mountain } from "./src/js/Mountain";
+import { Page } from "./src/js/Page";
 
 // DATA
 
 let mountains = [];
+let pages = [];
 
 const climateColors = {
     "changing weather conditions": "#8db600", // Light green
@@ -54,6 +56,21 @@ async function getMountains() {
 }
 
 await getMountains();
+
+async function getPages() {
+    const response = await fetch(`http://localhost:3000/pages`);
+    const data = await response.json();
+    data.map(p => pages.push(new Page(
+        p["id"],
+        p["title"],
+        p["description"],
+        p["sections"]
+    )))
+}
+
+await getPages();
+
+console.log(pages);
 
 function showMountains() {
     const cards = document.getElementById("cards");
