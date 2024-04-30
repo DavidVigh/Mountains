@@ -57,21 +57,6 @@ async function getMountains() {
 
 await getMountains();
 
-async function getPages() {
-    const response = await fetch(`http://localhost:3000/pages`);
-    const data = await response.json();
-    data.map(p => pages.push(new Page(
-        p["id"],
-        p["title"],
-        p["description"],
-        p["sections"]
-    )))
-}
-
-await getPages();
-
-console.log(pages);
-
 function showMountains() {
     const cards = document.getElementById("cards");
 
@@ -79,6 +64,9 @@ function showMountains() {
 
     for (const mountain of mountains) {
         const content = template.content.cloneNode(true);
+
+        let mountainID = content.getElementById("moreInformaionBtn");
+        mountainID.href = `aboutm.html?mountain-id=${mountain.id}`;
 
         let img = content.querySelector("img");
         img.src = mountain.imgPath;
@@ -246,8 +234,6 @@ box.appendChild(h2);
 console.log(mountains)
 
 showMountains()
-
-window.onload = console.log(document.location.href);
 
 
 

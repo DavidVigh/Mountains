@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mountains</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 
@@ -142,7 +146,7 @@
 
         </div>
 
-        <div id="mountainCount" class="box">
+        <div id="mountainCount" class="boxCount">
         </div>
 
         <div class="row d-flex mt-5" id="cards">
@@ -150,11 +154,12 @@
         </div>
     </main>
 
-    <script type="module" src="main.mjs"></script>
+    <script type="module" src="main.js"></script>
 
     <template id="cardTemplate">
         <div class="col-xs-12 col-md-6 col-xl-4 mb-5">
             <div class="card h-100 mb-2">
+                
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body d-flex flex-column justify-content-between">
                     <h3 class="card-title"></h3>
@@ -176,7 +181,7 @@
                         </p>
                     </div>
 
-                    <a href="#" class="btn btn-primary">More details</a>
+                    <a href="" id="moreInformaionBtn" class="btn btn-primary">More details</a>
                 </div>
             </div>
         </div>
