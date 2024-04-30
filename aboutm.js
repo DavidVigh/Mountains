@@ -159,8 +159,9 @@ function setPageData() {
 
     let count = 1;
     for (const iterator of currentPage.sections) {
-        const title = document.createElement('h3');
+        const title = document.createElement('h4');
         title.textContent = iterator.title;
+        title.style.fontWeight = "600";
         const text = document.createElement('p');
         text.textContent = iterator.content;
 

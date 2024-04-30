@@ -1,18 +1,22 @@
-*{
-  font-family: 'Schibsted Grotesk';;
+:root {
+  color-scheme: light dark;
+}
+
+* {
+  font-family: 'Schibsted Grotesk', sans-serif;
 }
 
 .collapse-href {
-    text-decoration: none;
-    color: #2b3035;
+  text-decoration: none;
+  color: #2b3035;
 }
 
 .card-dl {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .card {
-    height: 750px;
+  height: 750px;
 }
 
 input::-webkit-outer-spin-button,
@@ -41,6 +45,30 @@ input[type=number] {
 .box #content p {
   padding: 5px 15px;
 }
-.box #content h3 {
-  padding-left: 5px;
+
+.box #content h4 {
+  padding-left: 15px;
+}
+
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+.card {
+  transition: 0.3s;
+}
+
+.card .card-body {
+  background: light-dark(#ffffff, #2b3035);
+  color: light-dark(#000000, #dedede);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(105%);
+  cursor: pointer;
 }
