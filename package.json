@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "serve-json": "json-server --watch src\\json\\data.json"
+    "serve-json": "json-server --watch src\\json\\data.json",
+    "host": "vite --host",
+    "start": "npm run dev && npm run serve-json && npm run dev"
+
   },
   "author": "",
   "license": "ISC",

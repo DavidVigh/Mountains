@@ -38,8 +38,12 @@ input[type=number] {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 45vh;
   border-radius: 5px 5px 0 0;
+}
+
+#content-desc *{
+  color: rgb(233, 233, 233);
 }
 
 .box #content p {

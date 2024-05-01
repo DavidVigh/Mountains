@@ -104,7 +104,7 @@ function setPageData() {
     body.style.backgroundSize = "cover";
     body.style.backdropFilter = "blur(10px)";
     
-    img.style.backgroundImage = `url(${path})`;
+    img.style.backgroundImage = `linear-gradient(0deg, rgba(23, 28, 33, 0.80), rgba(43, 48, 53, 0.80)), url(${path})`;
     img.classList.add("bg");
 
     // Name
