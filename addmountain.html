@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add mountain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/virtual-select.min.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="text-center fw-bolder">Add mountain</h1>
+        <form class="row" action="">
+            <!--col-->
+            <label class="form-label" for="name">Name of the mountain</label>
+            <input class="form-control" type="text" name="name" id="name">
+
+            <label for="form-label" for="game">Name of the game</label>
+            <input type="text" class="form-control" name="game" id="game">
+
+            <label class="form-label" for="height">Height</label>
+            <input type="number" class="form-control" name="height" min="1" id="height">
+
+            <label for="climateselect">Add climate</label>
+            <div id="climateselect" multiple data-value-key="id" data-search="true"></div>
+
+
+            <label for="form-label" for="img">Add image</label>
+            <input type="file" class="form-control" name="img" id="img">
+
+            <label for="details" class="form-label">Details</label>
+            <textarea class="form-control" name="details" id="details" style="resize:none;" rows="4"></textarea>
+
+            <button type="button" class="btn btn-success">Add</button>
+
+
+        </form>
+    </main>
+    <!--id
+    name
+    game
+    details
+    imgPath
+    height
+    climate-->
+
+    <script src="src/js/virtual-select.min.js"></script>
+    <script type="module" src="addmountain.js"></script>
+</body>
+
+</html>

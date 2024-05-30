@@ -1,5 +1,5 @@
-:root {
-  color-scheme: light dark;
+:root{
+  color-scheme: light-dark;
 }
 
 * {
@@ -67,12 +67,16 @@ input[type=number] {
 }
 
 .card .card-body {
-  background: light-dark(#ffffff, #2b3035);
-  color: light-dark(#000000, #dedede);
+  background: light-dark(#ffffff, #d8d8d8);
+  color: light-dark(#000000, #000000);
   transition: 0.3s;
 }
 
 .card:hover {
   transform: scale(105%);
   cursor: pointer;
+}
+
+#climateselect {
+  padding: 0;
 }
