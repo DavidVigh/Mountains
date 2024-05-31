@@ -18,17 +18,42 @@ for (const key in climateColors) {
 
   const newOption = {
     label: key,
-    value: element,
+    value: key,
   };
 
   document.querySelector("#climateselect").addOption(newOption);
 }
 
+let selectedClimates = [];
 
-// const body = document.querySelector('body');
+document
+  .querySelector("#climateselect")
+  .addEventListener("change", function () {
+    let selectedClimate = document.querySelector(".vscomp-hidden-input").value;
 
-// body.style.backgroundImage = `url(/src/img/addmountain-bg.png)`;
-// body.style.backgroundAttachment = "fixed";
-// body.style.backgroundRepeat = "norepeat";
-// body.style.backgroundSize = "cover";
-// body.style.backdropFilter = "blur(10px)";
+    selectedClimates = selectedClimate.split(",");
+
+    console.log(selectedClimates);
+  });
+
+const submit = document.getElementById("addmountain");
+
+submit.addEventListener("click", () => {
+  const tags = document.getElementById("climatetags");
+
+  tags.value = selectedClimates;
+
+  console.log(tags);
+});
+
+let params = new URL(document.location).searchParams;
+let tags = params.get("climatetags");
+let name = params.get("name");
+let image = params.get("image");
+let height = params.get("height");
+let game = params.get("game");
+let details = params.get("details");
+
+console.log(tags);
+
+console.log(details);
