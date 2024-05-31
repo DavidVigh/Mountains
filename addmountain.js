@@ -23,3 +23,12 @@ for (const key in climateColors) {
 
   document.querySelector("#climateselect").addOption(newOption);
 }
+
+
+// const body = document.querySelector('body');
+
+// body.style.backgroundImage = `url(/src/img/addmountain-bg.png)`;
+// body.style.backgroundAttachment = "fixed";
+// body.style.backgroundRepeat = "norepeat";
+// body.style.backgroundSize = "cover";
+// body.style.backdropFilter = "blur(10px)";

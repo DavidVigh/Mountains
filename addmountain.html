@@ -14,34 +14,111 @@
 </head>
 
 <body>
-    <main class="container">
-        <h1 class="text-center fw-bolder">Add mountain</h1>
-        <form class="row" action="">
-            <!--col-->
-            <label class="form-label" for="name">Name of the mountain</label>
-            <input class="form-control" type="text" name="name" id="name">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#">Mountains</a>
+                    </li>
+                </ul>
+            </div>
 
-            <label for="form-label" for="game">Name of the game</label>
-            <input type="text" class="form-control" name="game" id="game">
+            <ul class="navbar-nav d-flex align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="addmountain.html">New mountain</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-            <label class="form-label" for="height">Height</label>
-            <input type="number" class="form-control" name="height" min="1" id="height">
+    <div class="banner-img"></div>
+    <form class="banner-text" action="">
+        <div class="row">
+            <h1 class="text-center fw-bolder">Add mountain</h1>
+        </div>
+        <!--col-->
+        <div class="row mt-3">
+            <div class="col-md-12 col-lg-6 mb-3">
 
-            <label for="climateselect">Add climate</label>
-            <div id="climateselect" multiple data-value-key="id" data-search="true"></div>
+                <label class="form-label" for="name">Name</label>
+                <input class="form-control" type="text" name="name" id="name">
+
+            </div>
+
+            <div class="col-md-12 col-lg-6 mb-3">
+
+                <label class="form-label" for="game">Game</label>
+                <input class="form-control" type="text" name="game" id="game">
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-12 col-lg-6 mb-3">
+
+                <label class="form-label" for="climateselect">Add climate</label>
+                <div id="climateselect" class="form-control" multiple data-value-key="id" data-search="true"></div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-3">
+
+                <label class="form-label" for="height">Height</label>
+                <input type="number" class="form-control" name="height" min="1" id="height">
+
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-3">
+
+                <label class="form-label" for="image">Add image</label>
+                <input type="file" class="form-control" name="image" id="image">
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-12 my-3">
+
+                <label for="details" class="form-label">Details</label>
+                <textarea class="form-control" name="details" id="details" style="resize:none;" rows="4"></textarea>
+
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-12 my-3 d-flex justify-content-center">
+
+                <button type="button" class="btn btn-success w-100 p-2">Add to database</button>
+
+            </div>
+        </div>
+    </form>
 
 
-            <label for="form-label" for="img">Add image</label>
-            <input type="file" class="form-control" name="img" id="img">
 
-            <label for="details" class="form-label">Details</label>
-            <textarea class="form-control" name="details" id="details" style="resize:none;" rows="4"></textarea>
+    <footer class="mb-0 bg-body-tertiary d-flex flex-column justify-content-center" style="height: 7vh;"
+        data-bs-theme="dark">
+        <p class="mb-0 
+text-center text-info">Created by: Vigh Dávid</p>
+    </footer>
 
-            <button type="button" class="btn btn-success">Add</button>
+    <!-- <footer class="footer mt-auto py-3 bg-body-tertiary">
+        <div class="container">
+            <span class="text-body-secondary">
+                asdsad
 
+            </span>
+        </div>
+    </footer> -->
 
-        </form>
-    </main>
     <!--id
     name
     game
