@@ -7,10 +7,17 @@
   box-sizing: border-box;
 }
 
-body,html {
+body {
   height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+  padding: 15px 0;
 }
 
 .collapse-href {
@@ -36,17 +43,15 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.box {
-  border: solid 3px #2b3035;
-  box-shadow: 0px 0px 5px rgb(0, 0, 0);
-}
-
 .bg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 45vh;
-  border-radius: 5px 5px 0 0;
+}
+
+.box {
+  box-shadow: 0px 0px 2px #2b3035;
 }
 
 #content-desc *{
@@ -93,26 +98,15 @@ input[type=number] {
 }
 
 
-.banner-img {
+.addimg-bg {
   background-image: url('/src/img/addmountain-bg.png');
-  -webkit-background-size: cover;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 105%;
-  filter: blur(5px);
 }
 
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  width: 85%;
-  padding: 40px 40px;
-  margin-top: 75px;
+.blur {
+  backdrop-filter: blur(5px);
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
 }

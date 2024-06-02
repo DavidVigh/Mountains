@@ -22,19 +22,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav d-flex align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Mountains</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2" href="#">Mountains</a>
+                        <a class="nav-link" href="addmountain.html">New mountain</a>
                     </li>
                 </ul>
             </div>
-
-            <ul class="navbar-nav d-flex align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="addmountain.html">New mountain</a>
-                </li>
-            </ul>
         </div>
     </nav>
 
@@ -109,22 +103,28 @@
 
             </div>
             <hr>
+            
             <form class="row">
                 <div class="col-md-6 col-lg-6 col-xl-2 my-2">
+
                     <label for="nameInput" class="form-label">Name</label>
                     <input type="text" value="" class="form-control" name="nameInput" id="nameInput">
+
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-4 my-2">
                     <label for="nameInput" class="form-label">Summit</label>
                     <div class="input-group d-flex align-items-center">
-                        <label for="" class="px-2">Between</label>
+
+                        <label for="summitMin" class="px-2">Between</label>
                         <input type="number" value="" id="summitMin" name="summitMin" min="0" class="form-control"
                             aria-label="Summit">
                         <span for="summitMin" class="input-group-text">m</span>
-                        <label for="" class="px-2">and</label>
+
+                        <label for="summitMax" class="px-2">and</label>
                         <input type="number" value="" id="summitMax" name="summitMax" min="1" class="form-control"
                             aria-label="Summit">
                         <span for="summitMax" class="input-group-text">m</span>
+
                     </div>
                 </div>
 
@@ -157,10 +157,10 @@
         </div>
     </main>
 
-    <footer class="mt-5 mb-0 bg-body-tertiary d-flex flex-column justify-content-center" style="height: 7vh;"
+    <footer class="mb-0 bg-body-tertiary d-flex flex-column justify-content-center" style="height: 7vh;"
         data-bs-theme="dark">
         <p class="mb-0 
-    text-center text-info">Created by: Vigh Dávid</p>
+text-center text-info">Created by: Vigh Dávid</p>
     </footer>
 
     <script type="module" src="main.js"></script>

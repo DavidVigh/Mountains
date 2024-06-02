@@ -11,9 +11,15 @@
         rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/virtual-select.min.css" />
+
+    <style>
+        html {
+            height: 100%;
+        }
+    </style>
 </head>
 
-<body>
+<body class="addimg-bg">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -23,85 +29,89 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav d-flex align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Mountains</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2" href="#">Mountains</a>
+                        <a class="nav-link" href="addmountain.html">New mountain</a>
                     </li>
                 </ul>
             </div>
-
-            <ul class="navbar-nav d-flex align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="addmountain.html">New mountain</a>
-                </li>
-            </ul>
         </div>
     </nav>
 
-    <div class="banner-img"></div>
-    <form class="banner-text" action="">
-        <div class="row">
-            <h1 class="text-center fw-bolder">Add mountain</h1>
+    <main class="container-fluid blur h-100 d-flex align-items-center justify-content-center py-5">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-2"></div>
+
+                <form class="col-8" action="">
+                    <div class="row">
+                        <h1 class="text-center fw-bolder">Add mountain</h1>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12 col-lg-6 mb-3">
+
+                            <label class="form-label" for="m-name">Name</label>
+                            <input class="form-control" type="text" name="m-name" id="m-name">
+
+                        </div>
+
+                        <div class="col-md-12 col-lg-6 mb-3">
+
+                            <label class="form-label" for="game">Game</label>
+                            <input class="form-control" type="text" name="game" id="game">
+
+                        </div>
+
+                        <div class="col-md-12 col-lg-6 mb-3">
+
+                            <input type="hidden" id="climatetags" name="climatetags">
+                            <p class="form-label" for="climateselect">Add climate</p>
+                            <div id="climateselect" class="form-control" multiple data-value-key="id"
+                                data-search="true">
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 mb-3">
+
+                            <label class="form-label" for="height">Height</label>
+                            <input type="number" class="form-control" name="height" min="1" id="height">
+
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 mb-3">
+
+                            <label class="form-label" for="image">Add image</label>
+                            <input type="file" class="form-control" name="image" id="image">
+
+                        </div>
+
+                        <div class="col-12 my-3">
+
+                            <label for="details" class="form-label">Details</label>
+                            <textarea class="form-control" name="details" id="details" style="resize:none;"
+                                rows="4"></textarea>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 my-3 d-flex justify-content-center">
+
+                        <button type="submit" id="addmountain" class="btn btn-success w-100 p-2">Add to
+                            database</button>
+
+                    </div>
+                </form>
+
+                <div class="col-2"></div>
+            </div>
         </div>
-        <!--col-->
-        <div class="row mt-3">
-            <div class="col-md-12 col-lg-6 mb-3">
-
-                <label class="form-label" for="name">Name</label>
-                <input class="form-control" type="text" name="name" id="name">
-
-            </div>
-
-            <div class="col-md-12 col-lg-6 mb-3">
-
-                <label class="form-label" for="game">Game</label>
-                <input class="form-control" type="text" name="game" id="game">
-
-            </div>
-        </div>
-        <div class="row">
-
-            <div class="col-md-12 col-lg-6 mb-3">
-                <input type="hidden" id="climatetags" name="climatetags">
-
-                <label class="form-label" for="climateselect">Add climate</label>
-                <div id="climateselect" class="form-control" multiple data-value-key="id" data-search="true"></div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-3 mb-3">
-
-                <label class="form-label" for="height">Height</label>
-                <input type="number" class="form-control" name="height" min="1" id="height">
-
-            </div>
-
-            <div class="col-md-6 col-lg-3 mb-3">
-
-                <label class="form-label" for="image">Add image</label>
-                <input type="file" class="form-control" name="image" id="image">
-
-            </div>
-        </div>
-        <div class="row">
-
-            <div class="col-12 my-3">
-
-                <label for="details" class="form-label">Details</label>
-                <textarea class="form-control" name="details" id="details" style="resize:none;" rows="4"></textarea>
-
-            </div>
-        </div>
-        </div>
-        <div class="row">
-            <div class="col-12 my-3 d-flex justify-content-center">
-
-                <button type="submit" id="addmountain" class="btn btn-success w-100 p-2">Add to database</button>
-
-            </div>
-        </div>
-    </form>
+    </main>
 
 
 
@@ -110,23 +120,6 @@
         <p class="mb-0 
 text-center text-info">Created by: Vigh Dávid</p>
     </footer>
-
-    <!-- <footer class="footer mt-auto py-3 bg-body-tertiary">
-        <div class="container">
-            <span class="text-body-secondary">
-                asdsad
-
-            </span>
-        </div>
-    </footer> -->
-
-    <!--id
-    name
-    game
-    details
-    imgPath
-    height
-    climate-->
 
     <script src="src/js/virtual-select.min.js"></script>
     <script type="module" src="addmountain.js"></script>
