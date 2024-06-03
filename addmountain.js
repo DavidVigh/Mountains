@@ -42,14 +42,6 @@ submit.addEventListener("click", () => {
   tags.value = selectedClimates;
 });
 
-let params = new URL(document.location).searchParams;
-let tags = params.get("climatetags");
-let name = params.get("name");
-let image = params.get("image");
-let height = params.get("height");
-let game = params.get("game");
-let details = params.get("details");
-
 
 function fileToBase64(file) {
   return new Promise((resolve, reject) => {
@@ -69,9 +61,9 @@ async function addMountain(event) {
     name: formData.get("m-name"),
     game: formData.get("game"),
     details: formData.get("details"),
+    imgPath: await fileToBase64(formData.get("image")),
     height: formData.get("height"),
-    climate: formData.get("climatetags").split(','),
-    imgPath: await fileToBase64(formData.get("image"))
+    climate: formData.get("climatetags").split(',')
   }
 
   console.log(data)

@@ -55,6 +55,7 @@ function getCurrentPageData() {
     ...mountains[id - 1],
     ...pages[id - 1]
   };
+
   return currentPage;
 }
 
