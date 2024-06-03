@@ -32,8 +32,6 @@ document
     let selectedClimate = document.querySelector(".vscomp-hidden-input").value;
 
     selectedClimates = selectedClimate.split(",");
-
-    console.log(selectedClimates);
   });
 
 const submit = document.getElementById("addmountain");
@@ -42,8 +40,6 @@ submit.addEventListener("click", () => {
   const tags = document.getElementById("climatetags");
 
   tags.value = selectedClimates;
-
-  console.log(tags);
 });
 
 let params = new URL(document.location).searchParams;
@@ -54,6 +50,43 @@ let height = params.get("height");
 let game = params.get("game");
 let details = params.get("details");
 
-console.log(tags);
 
-console.log(details);
+function fileToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onload = () => resolve(reader.result)
+    reader.onerror = reject
+  })
+}
+
+
+async function addMountain(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+
+  let data = {
+    name: formData.get("m-name"),
+    game: formData.get("game"),
+    details: formData.get("details"),
+    height: formData.get("height"),
+    climate: formData.get("climatetags").split(','),
+    imgPath: await fileToBase64(formData.get("image"))
+  }
+
+  console.log(data)
+
+
+  const init = {
+    method: "POST",
+    headers: {
+      accept: "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  }
+
+  fetch(`http://localhost:3000/mountains`, init)
+}
+
+document.getElementById("addmountain").addEventListener("submit", addMountain);

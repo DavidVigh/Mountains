@@ -12,8 +12,7 @@ import { Mountain } from "./src/js/Mountain";
 // DATA
 
 let mountains = [];
-let pages = [];
-
+let totalMountains;
 
 async function getMountains() {
   const response = await fetch(`http://localhost:3000/mountains`);
@@ -31,6 +30,7 @@ async function getMountains() {
       )
     )
   );
+  totalMountains = mountains.length;
 }
 
 await getMountains();
@@ -91,8 +91,6 @@ function showMountains() {
     card.addEventListener("click", () => {
         document.location.href = `aboutm.html?mountain-id=${mountain.id}`;
     });
-
-
     cards.appendChild(content);
   };
 }
@@ -230,7 +228,7 @@ clearForm();
 
 const box = document.getElementById("mountainCount");
 const h2 = document.createElement("h2");
-h2.textContent = `Mountains (${mountains.length}/16)`;
+h2.textContent = `Mountains (${mountains.length}/${totalMountains})`;
 h2.classList.add("text-center");
 h2.classList.add("fs-1");
 h2.classList.add("fw-bolder");
