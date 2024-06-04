@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountains</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="manage.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Mountains</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addmountain.html">New mountain</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manage.html">Manage mountains</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Manage mountains</h1>
+            </div>
+            <table class="col-12 table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Mountain name</th>
+                        <th>Page title</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+
+    <template>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <button type="submit" class="btn btn-warning">Modify</button>
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </template>
+</body>
+
+</html>

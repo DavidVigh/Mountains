@@ -11,12 +11,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/virtual-select.min.css" />
-
-    <style>
-        html {
-            height: 150%;
-        }
-    </style>
 </head>
 
 <body class="addimg-bg">
@@ -34,12 +28,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="addmountain.html">New mountain</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manage.html">Manage mountains</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main class="container-fluid blur h-100 d-flex justify-content-center py-5">
+    <main class="container-fluid blur d-flex justify-content-center py-5 faszom">
 
         <div class="container">
 
@@ -66,14 +63,14 @@
                         <div class="col-md-12 col-lg-6 mb-3">
 
                             <label class="form-label" for="m-name">Name</label>
-                            <input class="form-control" type="text" name="m-name" id="m-name">
+                            <input class="form-control" type="text" minlength="5" name="m-name" id="m-name">
 
                         </div>
 
                         <div class="col-md-12 col-lg-6 mb-3">
 
                             <label class="form-label" for="game">Game</label>
-                            <input class="form-control" type="text" name="game" id="game">
+                            <input class="form-control" type="text" minlength="5" name="game" id="game">
 
                         </div>
 
@@ -112,7 +109,7 @@
 
                     <div class="col-12 my-3 d-flex justify-content-center">
 
-                        <button type="submit" class="btn btn-success w-100 p-2">Add mountain to
+                        <button type="submit" class="btn btn-success w-100 p-2 margin">Add mountain to
                             database</button>
 
                     </div>
@@ -128,11 +125,18 @@
                         <div class="col-md-12 col-lg-6 mb-3">
 
                             <label class="form-label" for="m-name">Main title</label>
-                            <input class="form-control" type="text" name="m-name" id="m-name">
+                            <input class="form-control" type="text" minlength="5" name="m-name" id="m-name">
 
                         </div>
 
-                        <div class="col-md-12 col-lg-6 mb-3">
+                        <div class="col-md-12 col-lg-3 mb-3">
+
+                            <label class="form-label" for="m-id">Mountain id</label>
+                            <input class="form-control" type="text" minlength="1" name="m-id" id="m-id">
+
+                        </div>
+
+                        <div class="col-md-12 col-lg-3 mb-3">
 
                             <label class="form-label" for="sections">Add sections</label>
                             <select name="sections" id="sections" class="form-select">
@@ -147,8 +151,8 @@
 
                         <div class="col-12 mb-3">
 
-                            <label for="details" class="form-label">Description</label>
-                            <textarea class="form-control" name="details" id="details" style="resize:none;"
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" name="description" id="description" style="resize:none;"
                                 rows="2"></textarea>
 
                         </div>
@@ -157,7 +161,7 @@
 
                     <div class="col-12 my-3 d-flex justify-content-center">
 
-                        <button type="submit" class="btn btn-success w-100 p-2">Add page to database</button>
+                        <button type="submit" class="btn btn-success w-100 p-2 margin">Add page to database</button>
 
                     </div>
                 </form>
@@ -169,7 +173,7 @@
 
 
 
-    <footer class="mb-0 bg-body-tertiary d-flex flex-column justify-content-center" style="height: 7vh;"
+    <footer class="mb-0 bg-body-tertiary d-flex flex-column justify-content-center w-100" style="height: 7vh;"
         data-bs-theme="dark">
         <p class="mb-0 
 text-center text-info">Created by: Vigh Dávid</p>
@@ -177,7 +181,7 @@ text-center text-info">Created by: Vigh Dávid</p>
 
 
     <template id="sectionManage">
-        <div class="col-6 mb-3">
+        <div class="col-sm-6 mb-3" id="sectiondata">
 
             <label for="title" class="form-label " id="label-title"></label>
             <input class="form-control" type="text" name="title" id="title">

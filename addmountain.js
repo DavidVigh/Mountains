@@ -93,10 +93,22 @@ async function addPage(event) {
   event.preventDefault();
   const formData = new FormData(event.target);
 
+
   let data = {
+    id: formData.get("m-id"),
     title: formData.get("title"),
-    description: formData.get("description")
+    description: formData.get("description"),
+    sections: []
   };
+
+  for (const iterator of document.querySelectorAll("#sectiondata")) {
+    const section = {
+      title: iterator.querySelector("#title").value,
+      content: iterator.querySelector("#content").value
+    }
+    data.sections.push(section);
+  }
+
 
   const init = {
     method: "POST",
@@ -112,11 +124,6 @@ async function addPage(event) {
 
 
 document.getElementById("addpage").addEventListener("submit", addPage);
-
-
-
-
-
 
 const sections = document.getElementById("sections");
 
