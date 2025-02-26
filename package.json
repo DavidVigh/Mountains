@@ -1,14 +1,12 @@
 {
   "name": "mountains",
   "version": "1.0.0",
-  "description": "",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "serve-json": "json-server --watch src\\json\\data.json",
+    "serve-json": "npx json-server src\\json\\data.json",
     "host": "vite --host",
     "start": "npm run dev && npm run serve-json && npm run dev"
-
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +15,16 @@
     "json-server": "^1.0.0-alpha.23",
     "tinycolor2": "^1.6.0",
     "vite": "^5.2.9"
-  }
+  },
+  "main": "main.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidVigh/Mountains.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DavidVigh/Mountains/issues"
+  },
+  "homepage": "https://github.com/DavidVigh/Mountains#readme",
+  "description": ""
 }
